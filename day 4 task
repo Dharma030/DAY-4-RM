@@ -1,0 +1,198 @@
+HOW TO COMPARE TWO JSON HAVE THE PROPERTIES WITHOUT ORDER ?
+
+1.obj1 = {
+  name: 'person 1',
+  age: '5'
+};
+
+2. const obj2 = {
+  age: '5',
+  name: 'person 1'
+};
+
+ANSWER:
+
+const obj1 = {
+  name: 'person 1',
+  age: '5'
+};
+    
+const obj2 = {
+  age: '5',
+  name: 'person 1'
+};
+    
+JSON.stringify(obj1) === JSON.stringify(obj2)
+// false
+    
+_.isEqual(obj1, obj2)
+// true
+
+
+USE THE REST OF COUNTRIES API AND PRINT THE FLAGS IN THE CONSOLE.
+
+HTML CODE:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="script.js"></script>
+</body>
+</html>
+
+JAVA SCRIPT CODE:
+
+//step 1: creat an XHR Object
+var request=new XMLHttpRequest();
+//STEP 2 : INITIATE A REQUEST 
+// OPENING THE REQUEST
+//WJAT TYPE OF REQUEST WE ARE PROVIDING 
+//2 PARAMETERS
+//HTTP METHOD
+//URL
+request.open("GET","https://restcountries.com/v2/all");
+
+//step 03: sending the request 
+//pushing
+request.send();
+
+//step 04:once the data successfully loaded from server
+//status code:200
+//even :it is a specific work
+//onload event:it helps us to load the event
+//perform : to perform a specific task;
+request.onload=function(){
+    var result=JSON.parse(request.response);
+    console.log(result);
+    for(var i=0;i<result.length;i++)
+    {
+        console.log(result[i].flags);
+    }
+}
+
+TO PRINT THE COUNTRY REGION:
+//step 1: creat an XHR Object
+var request=new XMLHttpRequest();
+//STEP 2 : INITIATE A REQUEST 
+// OPENING THE REQUEST
+//WJAT TYPE OF REQUEST WE ARE PROVIDING 
+//2 PARAMETERS
+//HTTP METHOD
+//URL
+request.open("GET","https://restcountries.com/v2/all");
+
+//step 03: sending the request 
+//pushing
+request.send();
+
+//step 04:once the data successfully loaded from server
+//status code:200
+//even :it is a specific work
+//onload event:it helps us to load the event
+//perform : to perform a specific task;
+request.onload=function(){
+    var result=JSON.parse(request.response);
+    console.log(result);
+    for(var i=0;i<result.length;i++)
+    {
+        console.log(result[i].region);
+    }
+}
+
+
+TO PRINT THE COUNTRY NAMES:
+
+//step 1: creat an XHR Object
+var request=new XMLHttpRequest();
+//STEP 2 : INITIATE A REQUEST 
+// OPENING THE REQUEST
+//WJAT TYPE OF REQUEST WE ARE PROVIDING 
+//2 PARAMETERS
+//HTTP METHOD
+//URL
+request.open("GET","https://restcountries.com/v2/all");
+
+//step 03: sending the request 
+//pushing
+request.send();
+
+//step 04:once the data successfully loaded from server
+//status code:200
+//even :it is a specific work
+//onload event:it helps us to load the event
+//perform : to perform a specific task;
+request.onload=function(){
+    var result=JSON.parse(request.response);
+    console.log(result);
+    for(var i=0;i<result.length;i++)
+    {
+        console.log(result[i].names);
+    }
+}
+
+
+TO PRINT THER COUNTRY SUB-REGION:
+
+//step 1: creat an XHR Object
+var request=new XMLHttpRequest();
+//STEP 2 : INITIATE A REQUEST 
+// OPENING THE REQUEST
+//WJAT TYPE OF REQUEST WE ARE PROVIDING 
+//2 PARAMETERS
+//HTTP METHOD
+//URL
+request.open("GET","https://restcountries.com/v2/all");
+
+//step 03: sending the request 
+//pushing
+request.send();
+
+//step 04:once the data successfully loaded from server
+//status code:200
+//even :it is a specific work
+//onload event:it helps us to load the event
+//perform : to perform a specific task;
+request.onload=function(){
+    var result=JSON.parse(request.response);
+    console.log(result);
+    for(var i=0;i<result.length;i++)
+    {
+        console.log(result[i].sub-region);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
